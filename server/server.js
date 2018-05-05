@@ -10,7 +10,7 @@ var app = express();
 // setup the middleware
 app.use(bodyParser.json());
 
-// make post request
+// respond to the post request
 app.post('/todos', (req, res) => {
     // make the objcet
     var todo = new Todo({
@@ -24,6 +24,7 @@ app.post('/todos', (req, res) => {
     });
 });
 
+// listen to the request
 app.listen(3000, () => {
     console.log('The server is up on port 3000');
 });
